@@ -1,8 +1,487 @@
-/*
+@import url("https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap");
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+/* Quran Reader Plugin Styles */
 
-If your plugin does not need CSS, delete this file.
+/* Containers */
+.quran-reader,
+.quran-surah-list,
+.quran-search {
+	padding: 20px;
+}
 
-*/
+.quran-loading {
+	text-align: center;
+	padding: 40px;
+	color: var(--text-muted);
+}
+
+.quran-error {
+	color: var(--text-error);
+	padding: 20px;
+	text-align: center;
+}
+
+.quran-no-results {
+	text-align: center;
+	padding: 20px;
+	color: var(--text-muted);
+}
+
+/* Navigation */
+.quran-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--background-modifier-border);
+	margin-bottom: 20px;
+}
+
+.nav-btn {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.nav-btn:hover {
+	opacity: 0.9;
+}
+
+.chapter-selector {
+	padding: 8px 12px;
+	border-radius: 4px;
+	background: var(--background-secondary);
+	border: 1px solid var(--background-modifier-border);
+}
+
+/* Chapter Header */
+.chapter-header {
+	text-align: center;
+	padding: 30px 0;
+	border-bottom: 2px solid var(--background-modifier-border);
+	margin-bottom: 30px;
+}
+
+.chapter-title {
+	font-size: 2em;
+	margin: 0 0 10px 0;
+}
+
+.chapter-title-arabic {
+	font-size: 2.5em;
+	direction: rtl;
+	color: var(--text-accent);
+}
+
+.chapter-subtitle {
+	color: var(--text-muted);
+	margin-top: 8px;
+}
+
+.bismillah {
+	text-align: center;
+	font-size: 2em;
+	direction: rtl;
+	padding: 30px 0;
+	color: var(--text-accent);
+}
+
+/* Verses */
+.verses-container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.verse {
+	padding: 20px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.verse:hover {
+	background: var(--background-secondary);
+}
+
+.verse-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border-radius: 50%;
+	font-size: 0.85em;
+	font-weight: bold;
+	flex-shrink: 0;
+}
+
+.verse-arabic {
+	line-height: 2.2;
+	direction: rtl;
+	text-align: right;
+	margin: 15px 0;
+}
+
+.verse-translation {
+	color: var(--text-muted);
+	line-height: 1.8;
+	margin-top: 10px;
+	padding-left: 44px;
+}
+
+/* Surah List */
+.surah-list-header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.surah-list {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.surah-item {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	cursor: pointer;
+}
+
+.surah-item:hover {
+	background: var(--background-secondary);
+}
+
+.surah-number {
+	width: 40px;
+	height: 40px;
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	margin-right: 15px;
+	flex-shrink: 0;
+}
+
+.surah-info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.surah-name-transliterated {
+	font-weight: 600;
+}
+
+.surah-meta {
+	font-size: 0.8em;
+	color: var(--text-faint);
+}
+
+.surah-name-arabic {
+	font-size: 1.5em;
+	direction: rtl;
+	color: var(--text-accent);
+}
+
+/* Search */
+.search-input {
+	width: 100%;
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.search-input:focus {
+	border-color: var(--interactive-accent);
+	outline: none;
+}
+
+.search-results {
+	max-width: 600px;
+}
+
+.search-result-item {
+	padding: 15px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	cursor: pointer;
+}
+
+.search-result-item:hover {
+	background: var(--background-secondary);
+}
+
+.result-key {
+	font-weight: bold;
+	color: var(--text-accent);
+}
+
+.result-text {
+	color: var(--text-muted);
+	margin-top: 4px;
+	font-size: 0.9em;
+}
+
+/* Collection Modal */
+.quran-collection-modal .ranges-container {
+	margin: 16px 0;
+}
+
+.quran-collection-modal .range-item {
+	margin-bottom: 8px;
+}
+
+.quran-collection-modal .presets {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+
+.quran-collection-modal .preset-btn {
+	padding: 6px 12px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	color: var(--text-normal);
+	cursor: pointer;
+}
+
+.quran-collection-modal .preset-btn:hover {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+}
+
+/* ── Mushaf View ── */
+
+/* Amiri Quran font is loaded from Google Fonts in main.ts */
+
+.mushaf-view {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* Controls bar */
+.mushaf-controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	padding: 8px 16px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	flex-shrink: 0;
+	direction: ltr;
+}
+
+.mushaf-nav-btn {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border: none;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 1.2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mushaf-nav-btn:hover {
+	opacity: 0.85;
+}
+
+.mushaf-page-info {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.mushaf-page-input {
+	width: 52px;
+	text-align: center;
+	padding: 4px 6px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 0.95em;
+}
+
+.mushaf-page-input::-webkit-inner-spin-button,
+.mushaf-page-input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.mushaf-page-total {
+	color: var(--text-muted);
+	font-size: 0.9em;
+}
+
+/* Page wrapper — scrollable area */
+.mushaf-page-wrapper {
+	flex: 1;
+	overflow-y: auto;
+	display: flex;
+	justify-content: center;
+	padding: 24px 16px;
+}
+
+/* The page itself */
+.mushaf-page {
+	width: 100%;
+	max-width: 700px;
+	direction: rtl;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	background: var(--background-primary);
+	padding: 32px 24px 16px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Surah header ornament */
+.mushaf-surah-header {
+	text-align: center;
+	padding: 12px 24px;
+	margin-bottom: 8px;
+	border: 2px solid var(--text-accent);
+	border-radius: 8px;
+	background: var(--background-secondary);
+}
+
+.mushaf-surah-name {
+	font-family: "Amiri Quran", "Traditional Arabic", serif;
+	font-size: 1.6em;
+	color: var(--text-accent);
+}
+
+/* Bismillah */
+.mushaf-bismillah {
+	text-align: center;
+	font-family: "Amiri Quran", "Traditional Arabic", serif;
+	font-size: 1.5em;
+	color: var(--text-normal);
+	padding: 8px 0 12px;
+	line-height: 1.8;
+}
+
+/* Lines */
+.mushaf-line {
+	display: flex;
+	justify-content: space-between;
+	direction: rtl;
+	font-family: "Amiri Quran", "Traditional Arabic", serif;
+	font-size: 1.55em;
+	line-height: 2.4;
+	padding: 0 4px;
+	text-align: justify;
+}
+
+/* Words */
+.mushaf-word {
+	cursor: default;
+	transition: color 0.15s ease;
+}
+
+.mushaf-word:hover {
+	color: var(--text-accent);
+}
+
+/* Verse end markers */
+.mushaf-word-end {
+	font-size: 0.7em;
+	color: var(--text-accent);
+	vertical-align: middle;
+	padding: 0 2px;
+}
+
+/* Page footer */
+.mushaf-page-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 12px;
+	margin-top: auto;
+	border-top: 1px solid var(--background-modifier-border);
+	direction: ltr;
+}
+
+.mushaf-footer-surahs {
+	font-size: 0.8em;
+	color: var(--text-muted);
+}
+
+.mushaf-footer-page {
+	font-size: 0.85em;
+	color: var(--text-muted);
+	font-weight: 600;
+}
+
+/* ── Embedded Mushaf in notes ── */
+
+.mushaf-auto-inject {
+	margin-bottom: 16px;
+}
+
+.mushaf-embed-wrapper {
+	margin: 16px 0;
+}
+
+/* ── View Toggle ── */
+
+.quran-view-toggle {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	padding: 8px 0;
+	margin: 8px 0 16px;
+}
+
+.quran-toggle-btn {
+	padding: 6px 16px;
+	border-radius: 6px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	color: var(--text-normal);
+	cursor: pointer;
+	font-size: 0.85em;
+	transition:
+		background 0.15s ease,
+		color 0.15s ease;
+}
+
+.quran-toggle-btn:hover {
+	background: var(--background-modifier-hover);
+}
+
+.quran-toggle-btn.is-active {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border-color: var(--interactive-accent);
+}
+
+/* Toggle visibility: Mushaf mode hides verses, Verse mode hides mushaf */
+.quran-show-mushaf .quran-verse-section {
+	display: none;
+}
+
+.quran-show-verse .mushaf-embed-wrapper {
+	display: none;
+}

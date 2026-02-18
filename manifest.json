@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "obsidian-quran",
+	"name": "Quran Reader",
 	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"minAppVersion": "1.0.0",
+	"description": "Read and study the Quran within Obsidian with browsing, search, vault generation, and custom collections.",
+	"author": "Youcef",
+	"authorUrl": "https://github.com/youcef",
 	"isDesktopOnly": false
 }
