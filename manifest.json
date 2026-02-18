@@ -1,6 +1,6 @@
 {
-	"id": "obsidian-quran",
-	"name": "Quran Reader",
+	"id": "forqan-obsidian",
+	"name": "Forqan",
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
 	"description": "Read and study the Quran within Obsidian with browsing, search, vault generation, and custom collections.",
