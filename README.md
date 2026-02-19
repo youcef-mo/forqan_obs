@@ -1,13 +1,13 @@
-# Forqan for Obsidian
+# Forqan
 
-Read and study the Quran directly within Obsidian. This plugin provides a comprehensive set of tools for browsing, searching, and interacting with the Quran.
+Read and study the Quran with browsing, search, vault generation, and custom collections. This plugin provides a comprehensive set of tools for browsing, searching, and interacting with the Quran.
 
 ## Features
 
 *   **Mushaf View:** A beautiful and interactive Mushaf (Quran) reader.
 *   **Surah List:** Easily browse and navigate to different Surahs.
 *   **Search:** Powerful search functionality to find verses and keywords.
-*   **Vault Generation:** Generate the entire Quran as a structured vault within Obsidian.
+*   **Vault Generation:** Generate the entire Quran as a structured vault.
 *   **Custom Collections:** Create and manage your own collections of verses.
 
 ## How to Use
