@@ -1,7 +1,7 @@
 {
-	"name": "forqan_obs",
+	"name": "forqan",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Read and study the Quran with browsing, search, vault generation, and custom collections.",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
