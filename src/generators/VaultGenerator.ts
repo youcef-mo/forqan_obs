@@ -20,8 +20,7 @@ export class VaultGenerator {
 	}
 
 	async generateFullVault(options: VaultGeneratorOptions): Promise<void> {
-		// eslint-disable-next-line obsidianmd/ui/sentence-case -- "Quran" is a proper noun
-		const notice = new Notice("Generating Quran vault...", 0);
+		const notice = new Notice("Generating Quran ault...", 0);
 
 		try {
 			await this.createFolders();

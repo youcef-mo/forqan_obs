@@ -194,7 +194,6 @@ export class QuranReaderView extends ItemView {
 
 		menu.addItem((item) =>
 			item
-				// eslint-disable-next-line obsidianmd/ui/sentence-case -- "Arabic" is a proper noun
 				.setTitle("Copy Arabic")
 				.setIcon("copy")
 				.onClick(() => {
@@ -248,7 +247,7 @@ export class QuranReaderView extends ItemView {
 		}
 	}
 
-	async onClose(): Promise<void> {
-		// nothing to clean up
+	onClose(): Promise<void> {
+		return Promise.resolve();
 	}
 }

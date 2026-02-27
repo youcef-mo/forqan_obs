@@ -38,7 +38,6 @@ export default class QuranPlugin extends Plugin {
 			(leaf) => new MushafView(leaf, this),
 		);
 
-		// eslint-disable-next-line obsidianmd/ui/sentence-case -- "Quran" is a proper noun
 		this.addRibbonIcon("book-open", "Open Quran reader", () => {
 			void this.activateView(VIEW_TYPE_MUSHAF);
 		});
@@ -61,7 +60,7 @@ export default class QuranPlugin extends Plugin {
 
 		this.addCommand({
 			id: "open-mushaf",
-			name: "Open mushaf",
+			name: "Open Mushaf",
 			callback: () => {
 				void this.activateView(VIEW_TYPE_MUSHAF);
 			},

@@ -19,7 +19,6 @@ export class SearchView extends ItemView {
 	}
 
 	getDisplayText(): string {
-		// eslint-disable-next-line obsidianmd/ui/sentence-case -- "Quran" is a proper noun
 		return "Search Quran";
 	}
 
@@ -27,7 +26,7 @@ export class SearchView extends ItemView {
 		return "search";
 	}
 
-	async onOpen(): Promise<void> {
+	onOpen(): Promise<void> {
 		const container = this.containerEl.children[1] as HTMLElement;
 		container.empty();
 		container.addClass("quran-search");
@@ -47,6 +46,7 @@ export class SearchView extends ItemView {
 				void this.performSearch(query, results);
 			}, 400);
 		});
+		return Promise.resolve();
 	}
 
 	private async performSearch(
@@ -112,7 +112,8 @@ export class SearchView extends ItemView {
 		}
 	}
 
-	async onClose(): Promise<void> {
+	onClose(): Promise<void> {
 		if (this.debounceTimer) clearTimeout(this.debounceTimer);
+		return Promise.resolve();
 	}
 }

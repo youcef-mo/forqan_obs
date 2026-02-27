@@ -22,6 +22,18 @@ export default tseslint.config(
 		},
 	},
 	...obsidianmd.configs.recommended,
+	{
+		plugins: { obsidianmd },
+		rules: {
+			"obsidianmd/ui/sentence-case": [
+				"error",
+				{
+					enforceCamelCaseLower: true,
+					brands: ["Quran", "Mushaf", "Arabic", "Moses"],
+				},
+			],
+		},
+	},
 	globalIgnores([
 		"node_modules",
 		"dist",

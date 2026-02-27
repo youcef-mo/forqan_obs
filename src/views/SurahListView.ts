@@ -53,7 +53,6 @@ export class SurahListView extends ItemView {
 		container.empty();
 
 		container.createEl("h2", {
-			// eslint-disable-next-line obsidianmd/ui/sentence-case -- "Quran" is a proper noun
 			text: "Surahs of the Quran",
 			cls: "surah-list-header",
 		});
@@ -89,7 +88,7 @@ export class SurahListView extends ItemView {
 		}
 	}
 
-	async onClose(): Promise<void> {
-		// nothing to clean up
+	onClose(): Promise<void> {
+		return Promise.resolve();
 	}
 }

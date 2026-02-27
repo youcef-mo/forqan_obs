@@ -64,13 +64,11 @@ export class CreateCollectionModal extends Modal {
 
 		contentEl.createEl("h2", { text: "Create custom reading collection" });
 
-		/* eslint-disable obsidianmd/ui/sentence-case -- example with proper nouns */
 		new Setting(contentEl).setName("Collection name").addText((text) =>
-			text.setPlaceholder("e.g., Moses story").onChange((value) => {
+			text.setPlaceholder("E.g., Moses story").onChange((value) => {
 				this.collectionName = value;
 			}),
 		);
-		/* eslint-enable obsidianmd/ui/sentence-case */
 
 		const rangesContainer = contentEl.createDiv({
 			cls: "ranges-container",

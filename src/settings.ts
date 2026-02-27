@@ -36,7 +36,7 @@ export class QuranSettingsTab extends PluginSettingTab {
 		new Setting(containerEl).setName("Display").setHeading();
 
 		new Setting(containerEl)
-			.setName("Show arabic text")
+			.setName("Show Arabic text")
 			.addToggle((toggle) =>
 				toggle
 					.setValue(this.plugin.settings.showArabic)
@@ -97,7 +97,6 @@ export class QuranSettingsTab extends PluginSettingTab {
 		new Setting(containerEl)
 			.setName("Default note view mode")
 			.setDesc(
-				// eslint-disable-next-line obsidianmd/ui/sentence-case -- "Mushaf" is a proper noun
 				"Choose whether generated page notes show Mushaf layout or verse-by-verse by default.",
 			)
 			.addDropdown((dropdown) => {
@@ -114,10 +113,8 @@ export class QuranSettingsTab extends PluginSettingTab {
 			});
 
 		new Setting(containerEl)
-			// eslint-disable-next-line obsidianmd/ui/sentence-case -- "Mushaf" is a proper noun
 			.setName("Include Mushaf in generated notes")
 			.setDesc(
-				// eslint-disable-next-line obsidianmd/ui/sentence-case -- "Mushaf" is a proper noun
 				"When generating the vault, embed a Mushaf page view in each page note.",
 			)
 			.addToggle((toggle) =>

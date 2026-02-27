@@ -112,7 +112,7 @@ export class MushafView extends ItemView {
 		leaf.updateHeader?.();
 	}
 
-	async onClose(): Promise<void> {
-		// nothing to clean up
+	onClose(): Promise<void> {
+		return Promise.resolve();
 	}
 }
