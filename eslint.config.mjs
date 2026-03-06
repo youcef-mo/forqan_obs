@@ -2,6 +2,7 @@ import tseslint from 'typescript-eslint';
 import obsidianmd from "eslint-plugin-obsidianmd";
 import globals from "globals";
 import { globalIgnores } from "eslint/config";
+import { DEFAULT_BRANDS } from "eslint-plugin-obsidianmd/dist/lib/rules/ui/brands.js";
 
 export default tseslint.config(
 	{
@@ -12,7 +13,7 @@ export default tseslint.config(
 			parserOptions: {
 				projectService: {
 					allowDefaultProject: [
-						'eslint.config.js',
+						'eslint.config.mjs',
 						'manifest.json'
 					]
 				},
@@ -29,7 +30,7 @@ export default tseslint.config(
 				"error",
 				{
 					enforceCamelCaseLower: true,
-					brands: ["Quran", "Mushaf", "Arabic", "Moses"],
+					brands: [...DEFAULT_BRANDS, "Quran", "Mushaf", "Arabic", "Moses"],
 				},
 			],
 		},
@@ -38,7 +39,7 @@ export default tseslint.config(
 		"node_modules",
 		"dist",
 		"esbuild.config.mjs",
-		"eslint.config.js",
+		"eslint.config.mjs",
 		"version-bump.mjs",
 		"versions.json",
 		"main.js",

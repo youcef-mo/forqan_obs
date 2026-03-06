@@ -20,7 +20,7 @@ export class VaultGenerator {
 	}
 
 	async generateFullVault(options: VaultGeneratorOptions): Promise<void> {
-		const notice = new Notice("Generating Quran ault...", 0);
+		const notice = new Notice("Generating Quran vault...", 0);
 
 		try {
 			await this.createFolders();
