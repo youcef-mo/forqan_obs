@@ -36,7 +36,7 @@ export class QuranSettingsTab extends PluginSettingTab {
 		new Setting(containerEl).setName("Display").setHeading();
 
 		new Setting(containerEl)
-			.setName("Show Arabic text")
+			.setName("Show arabic text")
 			.addToggle((toggle) =>
 				toggle
 					.setValue(this.plugin.settings.showArabic)
@@ -97,7 +97,7 @@ export class QuranSettingsTab extends PluginSettingTab {
 		new Setting(containerEl)
 			.setName("Default note view mode")
 			.setDesc(
-				"Choose whether generated page notes show Mushaf layout or verse-by-verse by default.",
+				"Choose whether generated page notes show mushaf layout or verse-by-verse by default.",
 			)
 			.addDropdown((dropdown) => {
 				dropdown.addOption("verse", "Verse-by-verse");
@@ -113,9 +113,9 @@ export class QuranSettingsTab extends PluginSettingTab {
 			});
 
 		new Setting(containerEl)
-			.setName("Include Mushaf in generated notes")
+			.setName("Include mushaf in generated notes")
 			.setDesc(
-				"When generating the vault, embed a Mushaf page view in each page note.",
+				"When generating the vault, embed a mushaf page view in each page note.",
 			)
 			.addToggle((toggle) =>
 				toggle

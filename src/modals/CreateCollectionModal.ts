@@ -13,25 +13,25 @@ interface VerseRange {
 
 const PRESETS: Array<{ name: string; ranges: VerseRange[] }> = [
 	{
-		name: "Ayatul Kursi",
+		name: "Ayatul kursi",
 		ranges: [{ surah: 2, startVerse: 255, endVerse: 255 }],
 	},
 	{
-		name: "Moses Story (Al-Kahf)",
+		name: "Moses story (Al-Kahf)",
 		ranges: [
 			{ surah: 18, startVerse: 60, endVerse: 82, label: "Moses & Khidr" },
 		],
 	},
 	{
-		name: "Surah Yasin",
+		name: "Surah yasin",
 		ranges: [{ surah: 36, startVerse: 1, endVerse: 83 }],
 	},
 	{
-		name: "Surah Al-Mulk",
+		name: "Surah al-Mulk",
 		ranges: [{ surah: 67, startVerse: 1, endVerse: 30 }],
 	},
 	{
-		name: "Last 10 Surahs",
+		name: "Last 10 surahs",
 		ranges: Array.from({ length: 10 }, (_, i) => ({
 			surah: 105 + i,
 			startVerse: 1,
@@ -39,7 +39,7 @@ const PRESETS: Array<{ name: string; ranges: VerseRange[] }> = [
 		})),
 	},
 	{
-		name: "Friday Recitation",
+		name: "Friday recitation",
 		ranges: [
 			{ surah: 18, startVerse: 1, endVerse: 10, label: "First 10" },
 			{ surah: 18, startVerse: 101, endVerse: 110, label: "Last 10" },

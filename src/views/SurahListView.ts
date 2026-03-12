@@ -53,7 +53,7 @@ export class SurahListView extends ItemView {
 		container.empty();
 
 		container.createEl("h2", {
-			text: "Surahs of the Quran",
+			text: "Surahs of the quran",
 			cls: "surah-list-header",
 		});
 

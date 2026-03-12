@@ -38,7 +38,7 @@ export default class QuranPlugin extends Plugin {
 			(leaf) => new MushafView(leaf, this),
 		);
 
-		this.addRibbonIcon("book-open", "Open Quran reader", () => {
+		this.addRibbonIcon("book-open", "Open quran reader", () => {
 			void this.activateView(VIEW_TYPE_MUSHAF);
 		});
 
@@ -60,7 +60,7 @@ export default class QuranPlugin extends Plugin {
 
 		this.addCommand({
 			id: "open-mushaf",
-			name: "Open Mushaf",
+			name: "Open mushaf",
 			callback: () => {
 				void this.activateView(VIEW_TYPE_MUSHAF);
 			},

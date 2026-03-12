@@ -194,7 +194,7 @@ export class QuranReaderView extends ItemView {
 
 		menu.addItem((item) =>
 			item
-				.setTitle("Copy Arabic")
+				.setTitle("Copy arabic")
 				.setIcon("copy")
 				.onClick(() => {
 					void navigator.clipboard.writeText(
