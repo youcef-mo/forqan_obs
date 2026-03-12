@@ -65,7 +65,7 @@ export class CreateCollectionModal extends Modal {
 		contentEl.createEl("h2", { text: "Create custom reading collection" });
 
 		new Setting(contentEl).setName("Collection name").addText((text) =>
-			text.setPlaceholder("E.g., Moses story").onChange((value) => {
+			text.setPlaceholder("E.g., my collection").onChange((value) => {
 				this.collectionName = value;
 			}),
 		);

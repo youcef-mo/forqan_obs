@@ -30,7 +30,7 @@ export default tseslint.config(
 				"error",
 				{
 					enforceCamelCaseLower: true,
-					brands: [...DEFAULT_BRANDS, "Quran", "Mushaf", "Arabic", "Moses"],
+					brands: [...DEFAULT_BRANDS],
 				},
 			],
 		},

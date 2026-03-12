@@ -19,7 +19,7 @@ export class SearchView extends ItemView {
 	}
 
 	getDisplayText(): string {
-		return "Search Quran";
+		return "Search quran";
 	}
 
 	getIcon(): string {
